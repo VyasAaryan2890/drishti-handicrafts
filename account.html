@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<!----------Header Section---------------->
+
+
+<div class="container">
+    <div class="navbar">
+        <div class="logo">
+            <img src="images/ok1.png" alt="" width="220px">
+        </div>
+        <nav>
+            <ul id="MenuItem">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="account.html">Account</a></li>
+            </ul>
+        </nav>
+        <img src="images/cart.png" alt="" width="30px" height="30px" onclick="window.location.href='cart.html';">
+        <img src="images/menu.png" alt="" class="menu-icon" onclick="menutoggle()">
+    </div>
+</div>
+
+
+<!---------------------------account-page-------------------->
+
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="aarya/shop.jpg" alt="" width="100%">
+            </div>
+            <div class="col-2">
+                <div class="from-container">
+                    <div class="from-btn">
+                        <span onclick="login()">Login</span>
+                        <span onclick="register()">Register</span>
+                        <hr id="indicator">
+                    </div>
+
+                    <form id="loginfrom">
+                        <input type="text" placeholder="Username" required>
+                        <input type="password" placeholder="Password" required>
+                        <button type="submit" class="btn">Login</button>
+                        <a href="#">Forgot Password</a>
+                    </form>
+
+                    <form id="regfrom">
+                        <input type="text" placeholder="Username" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="password" placeholder="Password" required>
+                        <button type="submit" class="btn">Register</button>
+                    </form>
+
+
+				</div>
+            </div>
+        </div>
+		
+		
+		<div class="im">
+			<div class="img">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d459.63795533548205!2d69.37879455308222!3d22.835654711421697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395134091ef75063%3A0x15dc4226602f5aa9!2sDrishti%20Handicraft!5e0!3m2!1sen!2sin!4v1707397834171!5m2!1sen!2sin" width="" height="" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+		</div>
+		
+    </div>
+</div>
+
+<!------------------------footer------------------------------>
+
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android ios mobile phone</p>
+                <div class="app-logo">
+                    <img src="images/play-store.png" alt="">
+                    <img src="images/app-store.png" alt="">
+                </div>
+            </div>
+          
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Cuppons</li>
+                    <li>Blog Post</li>
+                    <li>Return Policy</li>
+                    <li>Join Affilliate</li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>Youtube</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copy">Copyright 2024 - Vyas Aaryan</p>
+    </div>
+</div>
+
+<!-----------------js for toggle menu--------------->
+
+<script>
+    var MenuItem = document.getElementById("MenuItem");
+
+    MenuItem.style.maxHeight = "0px";
+
+    function menutoggle() {
+        if (MenuItem.style.maxHeight == "0px") {
+            MenuItem.style.maxHeight = "200px"
+        }
+        else {
+            MenuItem.style.maxHeight = "0px"
+        }
+    }
+</script>
+
+
+<!------------------------js for form--------------------->
+
+<script>
+    var loginfrom = document.getElementById("loginfrom");
+    var regfrom = document.getElementById("regfrom");
+    var indicator = document.getElementById("indicator");
+
+    function register(){
+        regfrom.style.transform = "translateX(0px)";
+        loginfrom.style.transform ="translate(0px)";
+        indicator.style.transform ="translate(100px)";
+    }
+
+    function login(){
+        regfrom.style.transform = "translateX(300px)";
+        loginfrom.style.transform ="translate(300px)";
+        indicator.style.transform ="translate(0px)";
+    }
+</script>
+</body>
+
+</html>
